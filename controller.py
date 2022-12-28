@@ -16,10 +16,10 @@ class ControllerCadastro:
             print("Digite um nome valido")
             return 2
         if len(email) > 200:
-            print("Digite um nome valido")
+            print("Digite um email valido")
             return 3
         if len(senha) > 100 or len(senha) <6:
-            print("Digite um nome valido")
+            print("Digite uma senha valida")
             return 4
 
         return 1
@@ -44,7 +44,7 @@ class ControllerCadastro:
             session.commit()
             return 1
         except:
-            return 3
+            return 6
 
 #ControllerCadastro.cadastrar('Ésley','esleyOutro@email.com', 'nego12345')
 
@@ -60,6 +60,6 @@ class ControllerLogin:
             return False
 
 # print(ControllerCadastro.cadastrar('Camila','camila@email.com', 'senhadela'))
-print(ControllerLogin.login('camila@email.com', 'senhadela'))
+# print(ControllerLogin.login('camila@email.com', 'senhadela'))
 
         
