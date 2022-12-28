@@ -4,12 +4,12 @@ from sqlalchemy import create_engine
 import hashlib
 
 def retorna_session():
-    CONN = "sqlite:///projeto2.db"
+    CONN = "sqlite:///projeto2.db" 
     engine = create_engine(CONN, echo=True)
     Session = sessionmaker(bind=engine)
     return Session()
 
-class ControllerCadastro:
+class ControllerCadastro():
     @classmethod
     def verifica_dados(cls, nome, email, senha):
         if len(nome) > 50 or len(nome) <3:
@@ -48,7 +48,7 @@ class ControllerCadastro:
 
 #ControllerCadastro.cadastrar('Ésley','esleyOutro@email.com', 'nego12345')
 
-class ControllerLogin:
+class ControllerLogin():
     @classmethod
     def login(cls, email, senha):
         session = retorna_session()
